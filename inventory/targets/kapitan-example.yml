@@ -1,0 +1,24 @@
+parameters:
+  kapitan:
+    vars:
+      target: kapitan-example
+    dependencies:
+    - type: git
+      output_path: source/kapitan
+      source: git@github.com:deepmind/kapitan.git
+      subdir: kapitan
+      ref: master
+    - type: git
+      output_path: roy/prog
+      source: git@github.com:AlphaRoy14/BotNet
+      ref: master
+    compile:
+    - input_paths:
+      - source/kapitan/version.py
+      input_type: jinja2 # just to copy the file over to target
+      output_path: .
+    - input_paths:
+      - roy/prog/README.md
+      input_type: jinja2
+      output_path: .
+
