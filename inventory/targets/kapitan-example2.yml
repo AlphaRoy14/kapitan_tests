@@ -12,6 +12,12 @@ parameters:
       output_path: roy/prog
       source: git@github.com:AlphaRoy14/BotNet
       ref: master
+    - inventories:
+      - type: git
+        output_path: .
+        source: git@github.com:AlphaRoy14/nginx_kapitan
+        subdir: inventory
+        ref: master
     compile:
     - input_paths:
       - source/kapitan/version.py
