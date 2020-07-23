@@ -1,3 +1,3 @@
 parameters:
         nodeno: 2
-        hv: ${kapitan:vars:env}
+        hv: ${kapitan:vars:target}
